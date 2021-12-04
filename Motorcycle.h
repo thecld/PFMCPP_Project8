@@ -2,10 +2,15 @@
 
 #include <iostream>
 #include <limits>
+#include "Vehicle.h"
 
-struct Motorcycle : public Vehicle
+struct Motorcycle : Vehicle
 {
     Motorcycle(const std::string& n);
+
+    virtual ~Motorcycle() override;
+    Motorcycle(const Motorcycle&);
+    Motorcycle& operator=(const Motorcycle&) = default;
     
     void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
     

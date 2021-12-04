@@ -51,6 +51,10 @@ your task:
 #include <algorithm>
 #include <cassert>
 
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Vehicle.h"
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 

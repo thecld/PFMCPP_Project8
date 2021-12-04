@@ -2,6 +2,9 @@
 
 Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
+Motorcycle::Motorcycle(const Motorcycle&) = default;
+Motorcycle::~Motorcycle() = default;
+
 void Motorcycle::lanesplitAndRace( int topSpeed )
 {
     setSpeed(topSpeed);

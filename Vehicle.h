@@ -3,12 +3,14 @@
 #include <string>
 #include <iostream>
 
+struct HighwayPatrol;
+
 struct Vehicle
 {
     Vehicle(const std::string& n) : name(n) { }
     
-    virtual ~Vehicle() = default;
-    Vehicle(const Vehicle&) = default;
+    virtual ~Vehicle();// = default;
+    Vehicle(const Vehicle&);// = default;
     Vehicle& operator=(const Vehicle&) = default;
     
     virtual void setSpeed(int s)
@@ -22,6 +24,9 @@ struct Vehicle
         std::cout << name << ": you'll never take me alive, ya dirty coppers!" << std::endl;
         setSpeed(100);
     }
+    
+    friend HighwayPatrol;
+
 protected:
     int speed = 0;
     std::string name;

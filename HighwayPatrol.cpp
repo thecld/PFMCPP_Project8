@@ -7,6 +7,9 @@ HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
 
 }
 
+HighwayPatrol::HighwayPatrol(const HighwayPatrol&) = default;
+HighwayPatrol::~HighwayPatrol() = default;
+
 void HighwayPatrol::scanHighway(Highway* h)
 {
     std::cout << name << ": scanning highway for speeders" << std::endl;
