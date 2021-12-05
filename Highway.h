@@ -2,13 +2,13 @@
 
 #include <vector>
 #include <algorithm>
-#include "Vehicle.h"
+
 #include "Motorcycle.h"
 #include "Car.h"
 #include "SemiTruck.h"
 
+struct Vehicle;
 struct HighwayPatrol;
-struct SemiTruck;
 
 struct Highway
 {

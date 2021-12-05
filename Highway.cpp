@@ -1,6 +1,5 @@
 #include "Highway.h"
-
-#include <cassert>
+//#include <cassert>
 
 void Highway::changeSpeed(int newSpeed)
 {

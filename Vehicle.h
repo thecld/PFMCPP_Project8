@@ -25,7 +25,7 @@ struct Vehicle
         setSpeed(100);
     }
     
-    friend HighwayPatrol;
+friend HighwayPatrol;
 
 protected:
     int speed = 0;
