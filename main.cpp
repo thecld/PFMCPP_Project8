@@ -49,7 +49,7 @@ your task:
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cassert>
+//#include <cassert>
 
 #include "Highway.h"
 #include "HighwayPatrol.h"
