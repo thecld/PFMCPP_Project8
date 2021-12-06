@@ -1,5 +1,4 @@
 #include "Highway.h"
-//#include <cassert>
 
 void Highway::changeSpeed(int newSpeed)
 {
@@ -12,20 +11,22 @@ void Highway::changeSpeed(int newSpeed)
 
 void Highway::addVehicleInternal(Vehicle* v)
 {
-    if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v) ) bike->lanesplitAndRace();
-
-    if ( Car* car = dynamic_cast<Car*>(v) ) car->closeWindows();
-
-    if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v) ) truck->turnOnCBRadio();
+    if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v) )
+        bike->lanesplitAndRace();
+    else if ( Car* car = dynamic_cast<Car*>(v) )
+        car->closeWindows();
+    else if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v) )
+        truck->turnOnCBRadio();
 }
 
 void Highway::removeVehicleInternal(Vehicle* v)
 {
-    if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v) ) bike->tryToEvade();
-
-    if ( Car* car = dynamic_cast<Car*>(v) ) car->tryToEvade();
-
-    if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v) ) truck->pullOver();
+    if ( Motorcycle* bike = dynamic_cast<Motorcycle*>(v) )
+        bike->tryToEvade();
+    else if ( Car* car = dynamic_cast<Car*>(v) )
+        car->tryToEvade();
+    else if ( SemiTruck* truck = dynamic_cast<SemiTruck*>(v) )
+        truck->pullOver();
 }
 
 void Highway::addVehicle(Vehicle* v)

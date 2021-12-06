@@ -4,6 +4,7 @@ Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
 Motorcycle::Motorcycle(const Motorcycle&) = default;
 Motorcycle::~Motorcycle() = default;
+Motorcycle& Motorcycle::operator=(const Motorcycle&) = default;
 
 void Motorcycle::lanesplitAndRace( int topSpeed )
 {

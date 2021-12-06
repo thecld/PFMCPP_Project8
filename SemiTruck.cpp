@@ -4,6 +4,7 @@ SemiTruck::SemiTruck(const std::string& t) : Vehicle(t) {}
 
 SemiTruck::SemiTruck(const SemiTruck&) = default;
 SemiTruck::~SemiTruck() = default;
+SemiTruck& SemiTruck::operator=(const SemiTruck&) = default;
 
 void SemiTruck::turnOnCBRadio()
 {

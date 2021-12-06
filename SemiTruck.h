@@ -8,7 +8,7 @@ struct SemiTruck : Vehicle
 
     virtual ~SemiTruck() override;
     SemiTruck(const SemiTruck&);
-    SemiTruck& operator=(const SemiTruck&) = default;
+    SemiTruck& operator=(const SemiTruck&);
 
     void turnOnCBRadio();
     void pullOver();

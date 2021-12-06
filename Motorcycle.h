@@ -1,7 +1,5 @@
 #pragma once
 
-//#include <iostream>
-//#include <limits>
 #include "Vehicle.h"
 
 struct Motorcycle : Vehicle
@@ -10,9 +8,9 @@ struct Motorcycle : Vehicle
 
     virtual ~Motorcycle() override;
     Motorcycle(const Motorcycle&);
-    Motorcycle& operator=(const Motorcycle&) = default;
+    Motorcycle& operator=(const Motorcycle&);
     
-    void lanesplitAndRace( int topSpeed = 160 /*std::numeric_limits<int>::max()*/ );
+    void lanesplitAndRace( int topSpeed = std::numeric_limits<int>::max() );
     
     void tryToEvade() override;
 
