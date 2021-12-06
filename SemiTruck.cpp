@@ -8,6 +8,7 @@ SemiTruck& SemiTruck::operator=(const SemiTruck&) = default;
 
 void SemiTruck::turnOnCBRadio()
 {
+    setSpeed(65);
     std::cout << name << ": better turn on the CB radio to get noticed if there's a patrol!\n";
 }
 
